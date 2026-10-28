@@ -29,7 +29,14 @@
 .contact-name{font-family:Amiri,serif;color:#d4af37;font-size:1.35rem;font-weight:800}.contact-role{color:#94a3b8;font-size:.85rem;margin:2px 0 10px}
 .contact-links{display:flex;gap:8px;flex-wrap:wrap}.contact-btn{text-decoration:none;padding:9px 16px;border-radius:10px;font-weight:800;font-size:.88rem}
 .contact-wa{background:#25d366;color:#fff}.contact-site{background:#0f172a;color:#d4af37;border:1px solid #d4af37}
-</style></head><body>
+</style><style id="rslic">/* ===== نظام التفعيل ===== */
+.licdlg{position:fixed;inset:0;z-index:10000;background:#0d1b2acc;display:grid;place-items:center;padding:16px}.licbox{position:relative;background:#fff;border-radius:18px;max-width:380px;width:100%;padding:20px 18px;text-align:center;font-family:Tajawal;color:#0d1b2a;box-shadow:0 10px 40px #0007;border-top:6px solid #d4af37}
+.licx{position:absolute;top:8px;left:10px;border:none;background:none;font-size:18px;cursor:pointer}.lict{font:700 20px Amiri;margin-bottom:6px}.licd{font-size:14px;color:#455a64;margin-bottom:12px;line-height:1.7}
+.licdev{background:#f3ead2;border-radius:12px;padding:8px;font-size:13px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}.licdev b{font:700 20px monospace;letter-spacing:2px;color:#1b3769}.licc{border:1px solid #c9a23f;background:#fff;border-radius:8px;padding:3px 10px;cursor:pointer}
+.licwa{display:block;margin:10px 0;background:#25d366;color:#fff;border-radius:10px;padding:9px;text-decoration:none;font-weight:700;font-size:14px}.lici{width:100%;box-sizing:border-box;font:700 20px monospace;text-align:center;letter-spacing:2px;padding:10px;border:2px solid #c9a23f;border-radius:10px;margin:4px 0 8px}
+.licok{width:100%;background:#1b3769;color:#ffd54f;border:none;border-radius:10px;padding:11px;font:700 16px Tajawal;cursor:pointer}.licm{min-height:20px;margin-top:8px;color:#c62828;font-size:13px}
+.lockscr{position:fixed;inset:0;z-index:9500;background:linear-gradient(160deg,#0d1b2a,#1b3769);color:#fff;display:grid;place-items:center;text-align:center;font-family:Tajawal;padding:20px}.lockscr h2{font:700 26px Amiri;color:#ffd54f;margin:6px 0}.lockscr p{max-width:420px;line-height:1.9;color:#e3eef6}.lockscr button,.lockscr a{display:inline-block;margin:6px;border:none;border-radius:12px;padding:11px 18px;font:700 15px Tajawal;cursor:pointer;text-decoration:none}.lockscr .lk1{background:#d4af37;color:#0d1b2a}.lockscr .lk2{background:#ffffff22;color:#fff}
+.subbar{margin:10px 6px;background:#fff8e1;color:#4e342e;border:1px solid #d4af37;border-radius:12px;padding:8px 12px;font:700 14px Tajawal;text-align:center}.subbar button{background:#1b3769;color:#ffd54f;border:none;border-radius:8px;padding:5px 10px;font:700 13px Tajawal;cursor:pointer;margin-right:6px}a.unit{position:relative}a.unit.locked{opacity:.75}.lkb{position:absolute;top:8px;left:10px;font-size:20px}</style></head><body>
 <div class="top"><img src="icons/icon-180.png" alt=""><h1>الرياضيات الأساسية ١٢</h1><p>الصف الثاني عشر — مراجعة تفاعلية — الفصل الأول — إعداد أ. رشدي سيد</p></div>
 <div class="wrap">
 <div class="inst" id="ios"><h3>📲 ثبّت التطبيق على الآيفون (مرة واحدة بس)</h3><ol><li>اضغط زر المشاركة <span class="ico">⬆️</span> في أسفل Safari</li><li>انزل واختر <b>«إضافة إلى الشاشة الرئيسية»</b> <span class="ico">➕</span></li><li>اضغط <b>«إضافة»</b> — هتلاقي أيقونة «رياضيات ١٢» على شاشتك</li></ol><p style="margin:8px 0 0;font-size:13px;color:#795548">بعدها افتح من الأيقونة: كل حاجة هتشتغل حتى من غير إنترنت ✨</p></div>
@@ -70,4 +77,31 @@ if(standalone)document.getElementById('okb').style.display='block';else if(ios)d
 let dp=null;addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e;document.getElementById('and').style.display='block'});
 document.getElementById('instBtn').onclick=()=>{if(dp){dp.prompt();dp=null}};
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
-</script></body></html>
+</script><script id="rslicjs">window.RS_APP='math12';
+/* ===== نظام التفعيل حسب رقم الجهاز ===== */
+const LIC=(function(){const SEC='252eb1c1a232cea2d350c69f';
+ const h53=(str,seed=0)=>{let h1=0xdeadbeef^seed,h2=0x41c6ce57^seed;for(let i=0;i<str.length;i++){const c=str.charCodeAt(i);h1=Math.imul(h1^c,2654435761);h2=Math.imul(h2^c,1597334677)}h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909);h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);return 4294967296*(2097151&h2)+(h1>>>0)};
+ const AL='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';const enc=(n,len)=>{let s='';for(let i=0;i<len;i++){s+=AL[n%32];n=Math.floor(n/32)}return s};
+ const ls={get:k=>{try{return localStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
+ function dev(){let d=ls.get('rs_dev');if(!d||!/^[A-Z2-9]{8}$/.test(d)){const r=new Uint32Array(2);(crypto&&crypto.getRandomValues)?crypto.getRandomValues(r):(r[0]=Math.random()*4e9,r[1]=Math.random()*4e9);d=enc(r[0]*2097152+(r[1]%2097152),8);ls.set('rs_dev',d)}return d.slice(0,4)+'-'+d.slice(4)}
+ const code=(d,scope)=>{const c=enc(h53(String(d).replace(/-/g,'').toUpperCase()+'|'+scope+'|'+SEC),8);return c.slice(0,4)+'-'+c.slice(4)};
+ const norm=s=>String(s||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
+ function check(c,scope){return norm(c)===norm(code(dev(),scope))||norm(c)===norm(code(dev(),'ALL'))}
+ function ok(scope){const v=ls.get('rs_lic_'+scope);return !!v&&check(v,scope)}
+ function save(scope,c){if(check(c,scope)){ls.set('rs_lic_'+scope,norm(c));return true}return false}
+ const wa=(scope,label)=>'https://wa.me/96896690123?text='+encodeURIComponent('طلب كود تفعيل\nالنوع: '+label+'\nرقم الجهاز: '+dev());
+ return {dev,ok,save,wa,check}})();
+/* نافذة إدخال الكود */
+function licDialog(scope,title,desc,onOk){const old=document.getElementById('licdlg');if(old)old.remove();const w=document.createElement('div');w.id='licdlg';w.className='licdlg';
+ w.innerHTML='<div class="licbox"><button class="licx" title="إغلاق">✕</button><div class="lict">'+title+'</div><div class="licd">'+desc+'</div><div class="licdev">رقم جهازك<b dir="ltr">'+LIC.dev()+'</b><button class="licc">نسخ</button></div><a class="licwa" target="_blank" rel="noopener" href="'+LIC.wa(scope,title)+'">📲 أرسل رقم الجهاز على واتساب لطلب الكود</a><input class="lici" dir="ltr" placeholder="XXXX-XXXX" maxlength="12"><button class="licok">تفعيل</button><div class="licm"></div></div>';
+ document.body.appendChild(w);w.querySelector('.licx').onclick=()=>w.remove();
+ w.querySelector('.licc').onclick=()=>{try{navigator.clipboard.writeText(LIC.dev())}catch(e){}w.querySelector('.licm').textContent='تم النسخ ✓'};
+ w.querySelector('.licok').onclick=()=>{const v=w.querySelector('.lici').value;if(LIC.save(scope,v)){w.remove();onOk&&onOk()}else{w.querySelector('.licm').textContent='✗ الكود غير صحيح لهذا الجهاز'}}}
+
+
+function toast(m){let t=document.getElementById('rstoast');if(!t){t=document.createElement('div');t.id='rstoast';t.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#0d1b2a;color:#ffd54f;padding:10px 18px;border-radius:12px;z-index:10001;font-family:Tajawal';document.body.appendChild(t)}t.textContent=m;t.style.display='block';clearTimeout(t._h);t._h=setTimeout(()=>t.style.display='none',3000)}
+(function(){const app=RS_APP;const on=()=>LIC.ok('APP:'+app);
+ const bar=document.createElement('div');bar.className='subbar';document.querySelector('.units,main,body').prepend(bar);
+ function paint(){const act=on();bar.innerHTML=act?'✅ الاشتراك مفعّل على هذا الجهاز — كل الوحدات متاحة':'🎁 نسخة تجريبية: أول وحدتين مجانًا — <button>🔑 تفعيل الاشتراك</button>';const b=bar.querySelector('button');if(b)b.onclick=()=>licDialog('APP:'+app,'🔑 تفعيل الاشتراك','يفتح كل وحدات التطبيق على هذا الجهاز.',()=>{paint();toast('✓ تم تفعيل الاشتراك')});
+  document.querySelectorAll('a.unit').forEach(a=>{const m=(a.getAttribute('href')||'').match(/unit(\d+)\.html/);if(!m)return;const n=+m[1];const lock=n>2&&!act;a.classList.toggle('locked',lock);let k=a.querySelector('.lkb');if(lock&&!k){k=document.createElement('span');k.className='lkb';k.textContent='🔒';a.appendChild(k)}if(!lock&&k)k.remove();a.onclick=lock?(e=>{e.preventDefault();licDialog('APP:'+app,'🔒 هذه الوحدة للمشتركين','النسخة التجريبية تتيح أول وحدتين. فعّل الاشتراك لفتح كل الوحدات.',()=>{paint();location.href=a.href})}):null})}
+ paint()})();</script></body></html>
